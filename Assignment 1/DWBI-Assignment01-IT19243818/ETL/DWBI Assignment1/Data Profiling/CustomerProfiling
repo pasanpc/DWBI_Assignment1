@@ -1,0 +1,253 @@
+<?xml version="1.0"?>
+<DataProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/sqlserver/2008/DataDebugger/">
+  <ProfileVersion>1.0</ProfileVersion>
+  <DataSources>
+    <DtsDataSource ID="{EFFA6C60-BDFF-421C-901D-4BEDFF854D02}" Name="Analyse1">
+      <DtsConnectionManagerID>Analyse1</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{3D983A4B-E934-4AC2-8F3E-451C6817D32C}" Name="BeerDataProfiling">
+      <DtsConnectionManagerID>BeerDataProfiling</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{54EBD623-AC34-4A67-BC9D-53F258521F36}" Name="BeerProfiling">
+      <DtsConnectionManagerID>BeerProfiling</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{282F8909-8A88-4F44-929E-3A28B9E7ED75}" Name="BreweryDataProfiiling">
+      <DtsConnectionManagerID>BreweryDataProfiiling</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{D8BC3CB2-B42B-4D47-AC1C-E7189F51B11E}" Name="BreweryProfiling">
+      <DtsConnectionManagerID>BreweryProfiling</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{D618CC55-561B-4090-A1AC-ED99D99C12DD}" Name="CustomerDataProfiling">
+      <DtsConnectionManagerID>CustomerDataProfiling</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{9003AE1C-4486-49C8-A164-603C0F5162CC}" Name="CustomerProfiling">
+      <DtsConnectionManagerID>CustomerProfiling</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{DE840009-29D4-4C04-A8AC-08A7831C4211}" Name="CustomerProfiling 1">
+      <DtsConnectionManagerID>CustomerProfiling 1</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{2D92E15F-D07E-485B-9110-874192D09FBC}" Name="LAPTOP-M3DO28EP.DWBI_Assignment1_Staging">
+      <DtsConnectionManagerID>LAPTOP-M3DO28EP.DWBI_Assignment1_Staging</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{45641B03-62A4-45BA-B993-001569544818}" Name="LAPTOP-M3DO28EP.DWBI_Assignment1_Staging 1">
+      <DtsConnectionManagerID>LAPTOP-M3DO28EP.DWBI_Assignment1_Staging 1</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{73CACE6C-AA64-403A-ABCE-5D9F93416774}" Name="ReviewDataProfiling">
+      <DtsConnectionManagerID>ReviewDataProfiling</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{FFDCA6A1-782F-481C-8E3B-40B8DABB4804}" Name="ReviewsProfiling">
+      <DtsConnectionManagerID>ReviewsProfiling</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{049DADB8-B9E1-4BB3-8EAC-B7F837797AC5}" Name="StyleDataProfiling">
+      <DtsConnectionManagerID>StyleDataProfiling</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{3581E614-BEA8-40CC-8A01-2C040BA028B3}" Name="StylesProfiling">
+      <DtsConnectionManagerID>StylesProfiling</DtsConnectionManagerID>
+    </DtsDataSource>
+  </DataSources>
+  <DataProfileInput>
+    <ProfileMode>Exact</ProfileMode>
+    <Timeout>0</Timeout>
+    <Requests>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq">
+        <DataSourceID>{2D92E15F-D07E-485B-9110-874192D09FBC}</DataSourceID>
+        <Table Schema="dbo" Table="StgCustomers " />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq">
+        <DataSourceID>{2D92E15F-D07E-485B-9110-874192D09FBC}</DataSourceID>
+        <Table Schema="dbo" Table="StgCustomers " />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq">
+        <DataSourceID>{2D92E15F-D07E-485B-9110-874192D09FBC}</DataSourceID>
+        <Table Schema="dbo" Table="StgCustomers " />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq">
+        <DataSourceID>{2D92E15F-D07E-485B-9110-874192D09FBC}</DataSourceID>
+        <Table Schema="dbo" Table="StgCustomers " />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <ColumnPatternProfileRequest ID="PatternReq">
+        <DataSourceID>{2D92E15F-D07E-485B-9110-874192D09FBC}</DataSourceID>
+        <Table Schema="dbo" Table="StgCustomers " />
+        <Column IsWildCard="true" />
+        <MaxNumberOfPatterns>10</MaxNumberOfPatterns>
+        <PercentageDataCoverageDesired>95</PercentageDataCoverageDesired>
+        <CaseSensitive>false</CaseSensitive>
+        <Delimiters> \t\r\n</Delimiters>
+        <Symbols>,.;:-"'`~=&amp;/\\@!?()&lt;&gt;[]{}|#*^%</Symbols>
+        <TagTableName />
+      </ColumnPatternProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq">
+        <DataSourceID>{2D92E15F-D07E-485B-9110-874192D09FBC}</DataSourceID>
+        <Table Schema="dbo" Table="StgCustomers " />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+      <FunctionalDependencyProfileRequest ID="FDReq">
+        <DataSourceID>{2D92E15F-D07E-485B-9110-874192D09FBC}</DataSourceID>
+        <Table Schema="dbo" Table="StgCustomers " />
+        <DeterminantColumns>
+          <Column IsWildCard="true" />
+        </DeterminantColumns>
+        <DependentColumn IsWildCard="true" />
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <FDStrengthThreshold>0.95</FDStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </FunctionalDependencyProfileRequest>
+    </Requests>
+  </DataProfileInput>
+  <DataProfileOutput>
+    <Profiles>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2D92E15F-D07E-485B-9110-874192D09FBC}</DataSourceID>
+        <Table DataSource="LAPTOP-M3DO28EP" Database="DWBI_Assignment1_Staging" Schema="dbo" Table="StgCustomers " RowCount="16368" />
+        <Column Name="cust_no" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{2D92E15F-D07E-485B-9110-874192D09FBC}</DataSourceID>
+        <Table DataSource="LAPTOP-M3DO28EP" Database="DWBI_Assignment1_Staging" Schema="dbo" Table="StgCustomers " RowCount="16368" />
+        <Column Name="cust_name" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{2D92E15F-D07E-485B-9110-874192D09FBC}</DataSourceID>
+        <Table DataSource="LAPTOP-M3DO28EP" Database="DWBI_Assignment1_Staging" Schema="dbo" Table="StgCustomers " RowCount="16368" />
+        <Column Name="cust_no" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>1</MinValue>
+        <MaxValue>4092</MaxValue>
+        <Mean>2046.5</Mean>
+        <StdDev>1181.25861548886</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{2D92E15F-D07E-485B-9110-874192D09FBC}</DataSourceID>
+        <Table DataSource="LAPTOP-M3DO28EP" Database="DWBI_Assignment1_Staging" Schema="dbo" Table="StgCustomers " RowCount="16368" />
+        <Column Name="cust_name" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>3</MinLength>
+        <MaxLength>16</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>9</Length>
+            <Count>2280</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>15</Length>
+            <Count>360</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>3</Length>
+            <Count>172</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>12</Length>
+            <Count>1108</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>6</Length>
+            <Count>1620</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>7</Length>
+            <Count>1892</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>10</Length>
+            <Count>2032</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>4</Length>
+            <Count>436</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>13</Length>
+            <Count>708</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>5</Length>
+            <Count>724</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>16</Length>
+            <Count>236</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>11</Length>
+            <Count>1460</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>14</Length>
+            <Count>608</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>8</Length>
+            <Count>2732</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{2D92E15F-D07E-485B-9110-874192D09FBC}</DataSourceID>
+        <Table DataSource="LAPTOP-M3DO28EP" Database="DWBI_Assignment1_Staging" Schema="dbo" Table="StgCustomers " RowCount="16368" />
+        <Column Name="cust_no" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>4092</NumberOfDistinctValues>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{2D92E15F-D07E-485B-9110-874192D09FBC}</DataSourceID>
+        <Table DataSource="LAPTOP-M3DO28EP" Database="DWBI_Assignment1_Staging" Schema="dbo" Table="StgCustomers " RowCount="16368" />
+        <Column Name="cust_name" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>4092</NumberOfDistinctValues>
+      </ColumnValueDistributionProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="false">
+        <DataSourceID>{2D92E15F-D07E-485B-9110-874192D09FBC}</DataSourceID>
+        <Table DataSource="LAPTOP-M3DO28EP" Database="DWBI_Assignment1_Staging" Schema="dbo" Table="StgCustomers " RowCount="16368" />
+        <Column Name="cust_name" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>\p{L}+</RegexText>
+            <Frequency>74</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>\p{L}+\d\d</RegexText>
+            <Frequency>10</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>\p{L}+\d+</RegexText>
+            <Frequency>13</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="FDReq">
+        <DataSourceID>{2D92E15F-D07E-485B-9110-874192D09FBC}</DataSourceID>
+        <Table DataSource="LAPTOP-M3DO28EP" Database="DWBI_Assignment1_Staging" Schema="dbo" Table="StgCustomers " RowCount="16368" />
+        <DeterminantColumns>
+          <Column Name="cust_name" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="cust_no" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="FDReq">
+        <DataSourceID>{2D92E15F-D07E-485B-9110-874192D09FBC}</DataSourceID>
+        <Table DataSource="LAPTOP-M3DO28EP" Database="DWBI_Assignment1_Staging" Schema="dbo" Table="StgCustomers " RowCount="16368" />
+        <DeterminantColumns>
+          <Column Name="cust_no" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="cust_name" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+    </Profiles>
+  </DataProfileOutput>
+</DataProfile>
